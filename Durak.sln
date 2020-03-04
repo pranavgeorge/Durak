@@ -1,0 +1,17 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Durak", "Durak\Durak.csproj", "{E26C13BC-B131-4032-8678-7EC1E227B2F2}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|anycpu = Debug|anycpu
+		Release|anycpu = Release|anycpu
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E26C13BC-B131-4032-8678-7EC1E227B2F2}.Debug|anycpu.ActiveCfg = Debug|anycpu
+		{E26C13BC-B131-4032-8678-7EC1E227B2F2}.Debug|anycpu.Build.0 = Debug|anycpu
+		{E26C13BC-B131-4032-8678-7EC1E227B2F2}.Release|anycpu.ActiveCfg = Release|anycpu
+		{E26C13BC-B131-4032-8678-7EC1E227B2F2}.Release|anycpu.Build.0 = Release|anycpu
+	EndGlobalSection
+EndGlobal
