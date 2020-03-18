@@ -6,9 +6,24 @@ namespace Durak
 {
     public class River
     {
+        #region field variables for River
         private List<Card> fRiverCards;
         private int fNumberOfCards;
+        #endregion
 
+        #region Encapsulate field variables
+        /// <summary>
+        /// Get Property of River Cards
+        /// </summary>
+        public List<Card> RiverCards { get => fRiverCards; }
+
+        /// <summary>
+        /// Get number of cards in river
+        /// </summary>
+        public int NumberOfCards { get => fNumberOfCards; }
+        #endregion
+
+        #region Constructor
         /// <summary>
         /// default Constructor
         /// </summary>
@@ -26,6 +41,9 @@ namespace Durak
             fRiverCards = new List<Card>();
             fRiverCards = aRiverCards;
         }
+        #endregion
+
+        #region Methods for River
 
         /// <summary>
         /// Add Cards to River
@@ -43,12 +61,23 @@ namespace Durak
         /// <param name="aCard"></param>
         public void RemoveCard(Card aCard)
         {
-            if (fRiverCards.Contains(aCard))
+            if (!(aCard is null))
             {
-                fRiverCards.Remove(aCard);
-                fNumberOfCards = fRiverCards.Count;
+                if (fRiverCards.Contains(aCard))
+                {
+                    fRiverCards.Remove(aCard);
+                    fNumberOfCards = fRiverCards.Count;
+                }
+                else
+                {
+                    throw new ArgumentOutOfRangeException("Card Doesn't exist in the river");
+                }
             }
-            throw new ArgumentOutOfRangeException("Card Doesn't exist in the river");
+            else
+            {
+                throw new ArgumentNullException($"Null Card is passed to remove from river.\nCard: {aCard.ToString()}");
+            }
+
         }
 
         /// <summary>
@@ -74,6 +103,18 @@ namespace Durak
         }
 
         /// <summary>
+        /// Compare the Players card Dealt on the river
+        /// </summary>
+        /// <returns></returns>
+        public bool CompareCards()
+        {
+            Console.WriteLine(fRiverCards.Count);
+            Console.WriteLine(fRiverCards[fNumberOfCards - 1].ToString() + " > " + fRiverCards[fNumberOfCards - 2].ToString());
+            Console.WriteLine(fRiverCards[fNumberOfCards - 1] > fRiverCards[fNumberOfCards - 2]);
+            return fRiverCards[fNumberOfCards - 1] > fRiverCards[fNumberOfCards - 2];
+        }
+
+        /// <summary>
         /// Clear the River List
         /// </summary>
         public void ClearRiver()
@@ -81,6 +122,7 @@ namespace Durak
             fRiverCards.Clear();
             fNumberOfCards = fRiverCards.Count;
         }
+        #endregion
 
         /// <summary>
         /// Converts the value of this instance to its equivalent string representation
@@ -94,30 +136,8 @@ namespace Durak
             {
                 lBuilder.AppendLine(item.ToString());
             }
-            _ = lBuilder.Append("Number Of Cards Remaining: ")
-                        .Append(fNumberOfCards.ToString());
-            return lBuilder.ToString();
+            return lBuilder.Append("Number Of Cards Remaining: ")
+                           .Append(fNumberOfCards.ToString()).ToString();
         }
-
-        /// <summary>
-        /// Compare the Players card Dealt on the river
-        /// </summary>
-        /// <returns></returns>
-        public bool CompareCards()
-        {
-            Console.WriteLine(fRiverCards.Count);
-            Console.WriteLine(fRiverCards[fNumberOfCards - 1].ToString() + " > " + fRiverCards[fNumberOfCards - 2].ToString());
-            Console.WriteLine(fRiverCards[fNumberOfCards - 1] > fRiverCards[fNumberOfCards - 2]);
-            return fRiverCards[fNumberOfCards - 1] > fRiverCards[fNumberOfCards - 2];
-        }
-        /// <summary>
-        /// Property River Cards
-        /// </summary>
-        public List<Card> RiverCards { get => fRiverCards; }
-
-        /// <summary>
-        /// get number of cards in river
-        /// </summary>
-        public int NumberOfCards { get => fNumberOfCards; }
     }
 }

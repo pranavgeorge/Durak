@@ -11,15 +11,15 @@ namespace Durak
                 Game MyGame = new Game(2, 20);
                 Console.WriteLine();
                 Console.WriteLine("__________________________________________________");
-                MyGame.Players[0].GameStatus = GameStatus.Attacking;
-                MyGame.Players[1].GameStatus = GameStatus.Defending;
+                MyGame.Players[0].Status = GameStatus.Attacking;
+                MyGame.Players[1].Status = GameStatus.Defending;
 
                 do
                 {
                     Console.WriteLine(MyGame.Players[0].ToString());
                     Console.WriteLine("__________________________________________________");
                     Console.Write("Player Card Choice: ");
-                    if(MyGame.Players[0].PlayerHand.NumberOfCardsRemaining != 0)
+                    if (MyGame.Players[0].PlayerHand.NumberOfCardsRemaining != 0)
                     {
                         if (int.TryParse(Console.ReadLine(), out int PlayerCardChoice))
                         {
@@ -35,7 +35,7 @@ namespace Durak
                             {
                                 Play(MyGame, PlayerCardChoice);
                                 Console.WriteLine(MyGame.Players[1].ToString());
-                                if(MyGame.River.NumberOfCards > 1)
+                                if (MyGame.River.NumberOfCards > 1)
                                 {
                                     if (!MyGame.River.CompareCards())
                                     {
@@ -50,12 +50,12 @@ namespace Durak
                                         MyGame.SwapTurn();   //MyGame.EndTurn();
                                     }
                                 }
-                                
-                                if (MyGame.Players[1].GameStatus == GameStatus.Defending)
+
+                                if (MyGame.Players[1].Status == GameStatus.Defending)
                                 {
                                     MyGame.Players[1].Defend(MyGame);
                                 }
-                                else if (MyGame.Players[1].GameStatus == GameStatus.Attacking)
+                                else if (MyGame.Players[1].Status == GameStatus.Attacking)
                                 {
                                     MyGame.Players[1].Attack(MyGame);
                                 }
@@ -75,7 +75,7 @@ namespace Durak
                                 {
                                     MyGame.SwapTurn();   //MyGame.EndTurn();
                                 }
-                                
+
                             }
                         }
                         else
@@ -87,9 +87,9 @@ namespace Durak
                     {
                         MyGame.EndTurn();
                     }
-                    
+
                     //MyGame.Players[0].GameStatus = GameStatus.Won;
-                } while (MyGame.Players[0].GameStatus != GameStatus.Won || MyGame.Players[0].GameStatus != GameStatus.Lost);
+                } while (MyGame.Players[0].Status != GameStatus.Won || MyGame.Players[0].Status != GameStatus.Lost);
             }
             catch (Exception ex)
             {
@@ -103,7 +103,7 @@ namespace Durak
             Card card = MyGame.Players[0].PlayerHand.ChooseCardFromPlayerHand(aPlayerCardChoice - 1);
             MyGame.River.AddCard(card);
             MyGame.Players[0].PlayerHand.RemoveCard(card);
-            
+
         }
     }
 }

@@ -7,8 +7,12 @@ namespace Durak
 {
     public class PlayerHand
     {
+        #region field variables for PlayerHand Class
         private List<Card> fPlayerCard;
         private int fNumberOfCardsRemaining;
+        #endregion
+
+        #region Constructor
         /// <summary>
         /// default constructor 
         /// </summary>
@@ -26,7 +30,9 @@ namespace Durak
             fPlayerCard = new List<Card>();
             fPlayerCard = aDeckCards;
         }
+        #endregion
 
+        #region Encapsulate field variables
         /// <summary>
         /// Get the cards available in player hand
         /// </summary>
@@ -35,8 +41,9 @@ namespace Durak
         /// Get total number of cards the Player Holds
         /// </summary>
         public int NumberOfCardsRemaining { get => fNumberOfCardsRemaining; }
+        #endregion
 
-
+        #region Methods for PlayerHand
         /// <summary>
         /// Add Card to Player Hand
         /// </summary>
@@ -53,7 +60,11 @@ namespace Durak
         /// <param name="aCard"></param>
         public void AddCard(List<Card> aCard)
         {
-            fPlayerCard.AddRange(aCard);
+            //fPlayerCard.AddRange(aCard);
+            foreach (Card item in aCard)
+            {
+                fPlayerCard.Add(item);
+            }
             fNumberOfCardsRemaining = fPlayerCard.Count;
         }
 
@@ -73,13 +84,16 @@ namespace Durak
                     fNumberOfCardsRemaining = fPlayerCard.Count;
                     return lCard;
                 }
-                throw new InitializationException("Collection is Empty");
+                else
+                {
+                    throw new InitializationException("PlayerHand Collection is Empty");
+                }
             }
             else
             {
                 throw new ArgumentOutOfRangeException("Cannot Remove the Card from the Deck, as it doesn,t exist in the deck");
             }
-            
+
         }
 
         /// <summary>
@@ -88,16 +102,22 @@ namespace Durak
         /// <param name="aCard"></param>
         public void RemoveCard(Card aCard)
         {
-            if (fPlayerCard.Contains(aCard))
+            if (!(aCard is null))
             {
-                fPlayerCard.Remove(aCard);
-                fNumberOfCardsRemaining = fPlayerCard.Count;
+                if (fPlayerCard.Contains(aCard))
+                {
+                    fPlayerCard.Remove(aCard);
+                    fNumberOfCardsRemaining = fPlayerCard.Count;
+                }
+                else
+                {
+                    throw new ArgumentOutOfRangeException("Cannot Remove the Card from the Deck, as it doesn,t exist in the deck" + aCard.ToString());
+                }
             }
             else
             {
-                throw new ArgumentOutOfRangeException("Cannot Remove the Card from the Deck, as it doesn,t exist in the deck" + aCard.ToString());
+                throw new ArgumentNullException($"Null Card is passed to remove from playerHand.\nCard: {aCard.ToString()}");
             }
-            
         }
 
         /// <summary>
@@ -114,7 +134,7 @@ namespace Durak
             }
             else
             {
-                throw new InitializationException("Collection is Empty");
+                throw new InitializationException("PlayerHand Collection is Empty");
             }
         }
 
@@ -126,6 +146,8 @@ namespace Durak
         {
             return fNumberOfCardsRemaining;
         }
+        #endregion
+
         /// <summary>
         /// Converts the value of this instance to its equivalent string representation
         /// </summary>

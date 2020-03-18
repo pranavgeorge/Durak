@@ -4,11 +4,32 @@ namespace Durak
 {
     public class Game
     {
+        private const int DEFAULT_CARD_DECK_SIZE = 52;
+
+        #region field variables for Game
         private List<Player> fPlayers;
         private CardDeck fDeck;
         private River fRiver;
+        #endregion
 
-        private const int DEFAULT_CARD_DECK_SIZE = 52;
+        #region Encapsulate field variables
+        /// <summary>
+        /// Get Property for Players in the game
+        /// </summary>
+        public List<Player> Players { get => fPlayers; }
+
+        /// <summary>
+        /// Get Property for Card Deck
+        /// </summary>
+        public CardDeck Deck { get => fDeck; }
+
+        /// <summary>
+        /// Get Property for River
+        /// </summary>
+        public River River { get => fRiver; }
+        #endregion
+
+        #region Constructor
         /// <summary>
         /// Constructor with defalut 2 Players and default 52 Card Deck
         /// </summary>
@@ -45,15 +66,9 @@ namespace Durak
             }
             Initialize();
         }
+        #endregion
 
-        private void Initialize()
-        {
-            foreach (Player item in fPlayers)
-            {
-                item.CompleteHand(Deck);
-            }
-        }
-
+        #region Methods for Game
         /// <summary>
         /// Change the turn from attacking to defending or vice versa
         /// </summary>
@@ -61,17 +76,17 @@ namespace Durak
         {
             foreach (var player in fPlayers)
             {
-                if (player.GameStatus != GameStatus.Won || player.GameStatus != GameStatus.Lost)
+                if (player.Status != GameStatus.Won || player.Status != GameStatus.Lost)
                 {
-                    if (player.GameStatus == GameStatus.Attacking)
+                    if (player.Status == GameStatus.Attacking)
                     {
-                        player.GameStatus = GameStatus.Defending;
+                        player.Status = GameStatus.Defending;
                     }
-                    else if (player.GameStatus == GameStatus.Defending)
+                    else if (player.Status == GameStatus.Defending)
                     {
-                        player.GameStatus = GameStatus.Attacking;
+                        player.Status = GameStatus.Attacking;
                     }
-                } 
+                }
             }
         }
 
@@ -85,28 +100,29 @@ namespace Durak
 
             foreach (Player player in fPlayers)
             {
-                if(player.PlayerHand.NumberOfCardsRemaining == 0 && fRiver.NumberOfCards == 0 && fDeck.GetDeckSize() == 0)
+                if (player.PlayerHand.NumberOfCardsRemaining == 0 && fRiver.NumberOfCards == 0 && fDeck.GetDeckSize() == 0)
                 {
-                    player.GameStatus = GameStatus.Won;
+                    player.Status = GameStatus.Won;
                     Console.WriteLine(player.PlayerName + " has Won");
                     break;
                 }
             }
             SwapTurn();
         }
-        /// <summary>
-        /// Get Property for Players in the game
-        /// </summary>
-        public List<Player> Players { get => fPlayers; }
+        #endregion
+
+        #region Private Helpers
 
         /// <summary>
-        /// Get Property for Card Deck
+        /// Try to give 6 Cards to each player
         /// </summary>
-        public CardDeck Deck { get => fDeck; }
-
-        /// <summary>
-        /// Get Property for River
-        /// </summary>
-        public River River { get => fRiver; }
+        private void Initialize()
+        {
+            foreach (Player item in fPlayers)
+            {
+                item.CompleteHand(Deck);
+            }
+        }
+        #endregion
     }
 }
