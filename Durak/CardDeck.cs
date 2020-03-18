@@ -7,8 +7,11 @@ namespace Durak
     public class CardDeck
     {
         private static readonly int CARD_RANK_SIZE = Enum.GetValues(typeof(CardRank)).Length;
+        private static readonly int START_RANK_SIX = 6;
+        private static readonly int START_RANK_TEN = 10;
         private static readonly Random rand = new Random();
 
+        #region Constructor
         /// <summary>
         /// default constructor that set all the card values with its suit
         /// </summary>
@@ -32,10 +35,12 @@ namespace Durak
         /// create a specific amount of deck according to user requirement
         /// this game supports range of 20, 36, and 52
         /// </summary>
-        /// <param name="aDeckSize"></param>
+        /// <param name="aDeckSize">Range Of Deck(20,36,52)</param>
         public CardDeck(int aDeckSize)
         {
-            int lStartCardRank; // define the start point of the deck including ace card
+            // define the start point of the deck including ace card
+            int lStartCardRank;
+
             PlayingCards = new List<Card>();
             switch (aDeckSize)
             {
@@ -50,7 +55,7 @@ namespace Durak
                     Initalise();
                     break;
                 case 36: // Card include [Ace,Six,Seven,Eight,Nine,Ten,Jack,Queen,King]x[Club,Diamond,Heart,Spade]
-                    lStartCardRank = 6;
+                    lStartCardRank = START_RANK_SIX;
                     foreach (CardSuit suit in (CardSuit[])Enum.GetValues(typeof(CardSuit)))
                     {
                         PlayingCards.Add(new Card(suit, CardRank.Ace));
@@ -61,7 +66,7 @@ namespace Durak
                        PlayingCards.Add(new Card(CardSuit.Spade, CardRank.Ace));
                     */
 
-                    foreach (CardSuit suit in (CardSuit[])Enum.GetValues(typeof(CardSuit))) 
+                    foreach (CardSuit suit in (CardSuit[])Enum.GetValues(typeof(CardSuit)))
                     {
                         for (int i = lStartCardRank; i <= CARD_RANK_SIZE; i++)
                         {
@@ -71,7 +76,7 @@ namespace Durak
                     Initalise();
                     break;
                 case 20: // Card include [Ace,Ten,Jack,Queen,King]x[Club,Diamond,Heart,Spade]
-                    lStartCardRank = 10;
+                    lStartCardRank = START_RANK_TEN;
                     foreach (CardSuit suit in (CardSuit[])Enum.GetValues(typeof(CardSuit)))
                     {
                         PlayingCards.Add(new Card(suit, CardRank.Ace));
@@ -82,7 +87,7 @@ namespace Durak
                        PlayingCards.Add(new Card(CardSuit.Spade, CardRank.Ace));
                     */
 
-                    foreach(CardSuit suit in (CardSuit[])Enum.GetValues(typeof(CardSuit)))
+                    foreach (CardSuit suit in (CardSuit[])Enum.GetValues(typeof(CardSuit)))
                     {
                         for (int i = lStartCardRank; i <= CARD_RANK_SIZE; i++)
                         {
@@ -96,18 +101,57 @@ namespace Durak
                     throw new InvalidDeckSizeException("Not a valid Deck Size");
             }
         }
+        #endregion
 
-        private void Initalise()
-        {
-            Shuffle();
-            SetTrumpSuit();
-            PrintDeckCards();
-        }
+
+        #region Encapsulate field properties
         /// <summary>
         /// Get list that represents the cards been generated of the given size
         /// </summary>
         public List<Card> PlayingCards { get; } // uses auto property
+        #endregion
 
+        #region Methods For CardDeck
+        /// <summary>
+        /// Draws N number of card from the Deck
+        /// </summary>
+        /// <param name="aNumberOfCards">Total Number of Cards to be removed</param>
+        /// <returns></returns>
+        public List<Card> RemoveCard(int aNumberOfCards)
+        {
+            List<Card> lCards = new List<Card>();
+            for (int i = 0; i < aNumberOfCards; i++)
+            {
+                // Check if the Deck has at least one card to be removed
+                if (PlayingCards.Count > 0)
+                {
+                    // add the first element of deck to local list
+                    lCards.Add(PlayingCards.ElementAt(0));
+                    // remove the first element from the deck
+                    PlayingCards.RemoveAt(0);
+                }
+                else
+                {
+                    // no need to throw exception as it should stop removing cards from the deck if there is none
+                    break;
+                }
+
+            }
+            return lCards;
+        }
+
+        /// <summary>
+        /// Draws the first card from the deck
+        /// </summary>
+        /// <returns>the removed card from the deck</returns>
+        public Card RemoveCard()
+        {
+            // peek the first element from the deck
+            Card lCard = PlayingCards.First();
+            // remove the first element from the deck
+            PlayingCards.RemoveAt(0);
+            return lCard;
+        }
 
         /// <summary>
         /// Prints all the cards of the deck
@@ -124,6 +168,51 @@ namespace Durak
         }
 
         /// <summary>
+        /// return the deck size
+        /// </summary>
+        /// <returns></returns>
+        public int GetDeckSize()
+        {
+            // Get the Count of all the Cards in the deck
+            return PlayingCards.Count;
+        }
+
+        #endregion
+
+        #region Private helpers
+        /// <summary>
+        /// Initialise the default components for CardDeck Class
+        /// </summary>
+        private void Initalise()
+        {
+            // shuffle all the cards
+            Shuffle();
+            // Initialise each cards status
+            SetTrumpSuit();
+            // Print all the cards in the Playing Deck
+            PrintDeckCards();
+        }
+
+        /// <summary>
+        /// Initialise the trump cards in the Card deck
+        /// </summary>
+        /// <param name="aSuit"></param>
+        private void SetTrumpSuit()
+        {
+            Card lCard = PlayingCards.ElementAt(12);
+            PlayingCards.RemoveAt(12);
+            PlayingCards.Add(lCard);
+            // initialise the trump cards in the deck
+            foreach (Card item in PlayingCards)
+            {
+                if (item.CardSuitProperty == lCard.CardSuitProperty)
+                {
+                    item.IsTrumpCardProperty = true;
+                }
+            }
+        }
+
+        /// <summary>
         /// Shuffle All the cards in the deck using Fisher-Yates_shuffle
         /// </summary>
         private void Shuffle()
@@ -135,74 +224,13 @@ namespace Durak
             }
         }
 
-        private static void Swap(List<Card> list, int indexA, int indexB)
+        private static void Swap(List<Card> aList, int aIndexA, int aIndexB)
         {
-            Card tmp = list[indexA];
-            list[indexA] = list[indexB];
-            list[indexB] = tmp;
+            Card lTemp = aList[aIndexA];
+            aList[aIndexA] = aList[aIndexB];
+            aList[aIndexB] = lTemp;
         }
-
-        /// <summary>
-        /// return the deck size
-        /// </summary>
-        /// <returns></returns>
-        public int GetDeckSize()
-        {
-            return PlayingCards.Count;
-        }
-
-        /// <summary>
-        /// Initialise the trump cards in the Card deck
-        /// </summary>
-        /// <param name="aSuit"></param>
-        private void SetTrumpSuit()
-        {
-            Card lCard = PlayingCards.ElementAt(12);
-            PlayingCards.RemoveAt(12);
-            PlayingCards.Add(lCard); 
-            foreach (Card item in PlayingCards)
-            {
-                if (item.CardSuitProperty == lCard.CardSuitProperty)
-                {
-                    item.IsTrumpCardProperty = true;
-                }
-            }
-        }
-
-        /// <summary>
-        /// Draws N number of card from the Deck
-        /// </summary>
-        /// <param name="aNumberOfCards"></param>
-        /// <returns></returns>
-        public List<Card> RemoveCard(int aNumberOfCards)
-        {
-            List<Card> lCards = new List<Card>();
-            for (int i = 0; i < aNumberOfCards; i++)
-            {
-                if(PlayingCards.Count > 0)
-                {
-                    lCards.Add(PlayingCards.ElementAt(0));
-                    PlayingCards.RemoveAt(0);
-                }
-                else
-                {
-                    break;
-                }
-                
-            }
-            return lCards;
-        }
-
-        /// <summary>
-        /// Draws the first card from the deck
-        /// </summary>
-        /// <returns>the removed card from the deck</returns>
-        public Card RemoveCard()
-        {
-            Card lCard = PlayingCards.First();
-            PlayingCards.RemoveAt(0);
-            return lCard;
-        }
+        #endregion
 
         /// <summary>
         /// Converts the value of this instance to its equivalent string representation
