@@ -17,6 +17,8 @@ namespace Durak
         protected PlayerHand fPlayerHand;
         // Status of the Player
         protected GameStatus fGameStatus;
+        // Player throwing status
+        protected bool fIsThrowing;
         #endregion
 
         #region Encapsulate field properties
@@ -32,6 +34,10 @@ namespace Durak
         /// Get and Set Property for GameStatus <see cref="GameStatus"/>
         /// </summary>
         public GameStatus Status { get => fGameStatus; set => fGameStatus = value; }
+        /// <summary>
+        /// Get and Set property for player throwing the card or not
+        /// </summary>
+        public bool IsThrowing { get => fIsThrowing; set => fIsThrowing = value; }
         #endregion
 
         #region Constructor
@@ -41,6 +47,7 @@ namespace Durak
             fPlayerHand = new PlayerHand();
             fPlayerName = DEFALUT_NAME;
             fGameStatus = DEFAULT_GAME_STATUS;
+            fIsThrowing = false;
         }
 
         // Parameterised constructor 
@@ -49,6 +56,7 @@ namespace Durak
             fPlayerHand = new PlayerHand();
             fPlayerName = aPlayerName;
             fGameStatus = DEFAULT_GAME_STATUS;
+            fIsThrowing = false;
         }
         #endregion
 
@@ -97,11 +105,12 @@ namespace Durak
             if (!Object.ReferenceEquals(aCards, null))
             {
                 fPlayerHand.AddCard(aCards);
+
             }
             // may need to call endturn
             else
             {
-                throw new ArgumentNullException("Argument passed is Null");
+                throw new ArgumentNullException("Argument passed is Null in Player Take");
             }
         }
         #endregion
