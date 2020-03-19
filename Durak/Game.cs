@@ -86,8 +86,19 @@ namespace Durak
                     {
                         player.Status = GameStatus.Attacking;
                     }
+
+                    if (player.IsThrowing == true)
+                    {
+                        player.IsThrowing = false;
+                    }
+                    if (player.IsThrowing == false)
+                    {
+                        player.IsThrowing = true;
+                    }
                 }
+
             }
+
         }
 
         /// <summary>
