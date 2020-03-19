@@ -112,8 +112,15 @@ namespace Durak
                     // if player hand doesn't contains the river card suit and trump card and same rank
                     else
                     {
-                        Take(aGame.River.RiverCards);
-                        aGame.EndTurn();
+                        if (this.fGameStatus == GameStatus.Attacking && fIsThrowing == true)
+                        {
+                            aGame.EndTurn();
+                        }
+                        else if (this.fGameStatus == GameStatus.Defending && fIsThrowing == true)
+                        {
+                            Take(aGame.River.RiverCards);
+                            aGame.EndTurn();
+                        }
                     }
                 }
             }
