@@ -76,7 +76,7 @@ namespace Durak
                         }
                     }
 
-                    if (MyGame.Players[1].IsThrowing == true && MyGame.Players[0].PlayerHand.NumberOfCardsRemaining != 0)
+                    if (MyGame.Players[1].IsThrowing == true && MyGame.Players[1].PlayerHand.NumberOfCardsRemaining != 0)
                     {
                         Console.WriteLine(MyGame.Players[1].ToString());
                         Console.WriteLine("__________________________________________________");
@@ -87,9 +87,16 @@ namespace Durak
                             if (MyGame.River.NumberOfCards != 0)
                                 MyGame.Players[0].IsThrowing = true;
                         }
-                        else if (MyGame.Players[1].Status == GameStatus.Attacking)
+                        else if (MyGame.Players[1].Status == GameStatus.Attacking )
                         {
-                            MyGame.Players[1].Attack(MyGame);
+                            if (MyGame.River.NumberOfCards == 0)
+                            {
+                                MyGame.Players[1].Attack(MyGame);
+                            }
+                            else
+                            {
+                                MyGame.Players[1].Defend(MyGame);
+                            }
                             if (MyGame.River.NumberOfCards != 0)
                                 MyGame.Players[0].IsThrowing = true;
                         }

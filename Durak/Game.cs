@@ -108,7 +108,7 @@ namespace Durak
         {
             Initialize();
             fRiver.ClearRiver();
-
+            SwapTurn();
             foreach (Player player in fPlayers)
             {
                 if (player.PlayerHand.NumberOfCardsRemaining == 0 && fRiver.NumberOfCards == 0 && fDeck.GetDeckSize() == 0)
@@ -118,7 +118,6 @@ namespace Durak
                     break;
                 }
             }
-            SwapTurn();
         }
         #endregion
 

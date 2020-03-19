@@ -26,10 +26,8 @@ namespace Durak
         #region Methods for AIPlayer
         public override void Attack(Game aGame)
         {
-            //if (fPlayerHand.HandCount() >= 0)
-            //{
             Card lCard = new Card();
-            Console.WriteLine("Thinking ........");
+            Console.WriteLine("Thinking during Attack........");
             Thread.Sleep(2000);
 
             // If AiPlayer has Ace in Hand, logic to attack with the lowest card except Ace
@@ -69,21 +67,12 @@ namespace Durak
 
             aGame.River.AddCard(lCard);
             fPlayerHand.RemoveCard(lCard);
-            //may need to call end turn method
-            //}
-            //else
-            //{
-            //    aGame.EndTurn();
-            //}
-
         }
 
         public override void Defend(Game aGame)
         {
-            Console.WriteLine("Thinking ........");
+            Console.WriteLine("Thinking during defend........");
             Thread.Sleep(2000);
-            //if (fPlayerHand.HandCount() > 0)
-            //{
             Card lCard = new Card();
             int lIndex = aGame.River.NumberOfCards - 1;
             CardSuit lCardSuit = aGame.River.RiverCards[lIndex].CardSuitProperty;
@@ -128,12 +117,6 @@ namespace Durak
                     }
                 }
             }
-            // may need to call endturn method
-            //}
-            //else
-            //{
-            //    aGame.EndTurn();
-            //}
         }
         #endregion
     }
