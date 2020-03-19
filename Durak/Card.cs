@@ -153,21 +153,30 @@ namespace Durak
                         return true;
                     }
                     // If Card1 is not trump card and Card2 is trump card
-                    if (aCard1.fIsTrumpCard == false && aCard2.fIsTrumpCard == true)
+                    else if (aCard1.fIsTrumpCard == false && aCard2.fIsTrumpCard == true)
                     {
                         return false;
                     }
                     // If Card1 is trump card and Card2 is also trump card
                     else if (aCard1.fIsTrumpCard == true && aCard2.fIsTrumpCard == true)
                     {
+                        // If rank is same for both cards
+                        if (aCard1.CardRankProperty == aCard2.CardRankProperty)
+                        {
+                            return true;
+                        }
                         // Compare the rank of both the trump cards
                         return aCard1.fCardRank > aCard2.fCardRank;
                     }
-                    // If rank is same for both cards
-                    else if (aCard1.CardRankProperty == aCard2.CardRankProperty)
+                    else if (aCard1.fIsTrumpCard == false && aCard2.fIsTrumpCard == false)
                     {
-                        return true;
+                        // If rank is same for both cards
+                        if (aCard1.CardRankProperty == aCard2.CardRankProperty)
+                        {
+                            return true;
+                        }
                     }
+
                 }
                 // for any other possibility return false
                 return false;

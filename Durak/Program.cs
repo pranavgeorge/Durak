@@ -18,61 +18,59 @@ namespace Durak
 
                 do
                 {
-                    if (MyGame.Players[0].IsThrowing == true)
+                    if (MyGame.Players[0].IsThrowing == true && MyGame.Players[0].PlayerHand.NumberOfCardsRemaining != 0)
                     {
-                        if (MyGame.Players[0].PlayerHand.NumberOfCardsRemaining != 0)
+
+                        Console.WriteLine("__________________________________________________");
+                        Console.WriteLine("__________________________________________________");
+                        Console.WriteLine(MyGame.Players[0].ToString());
+                        Console.WriteLine("__________________________________________________");
+                        Console.WriteLine("__________________________________________________");
+                        Console.Write("Player Card Choice: ");
+                        if (int.TryParse(Console.ReadLine(), out int PlayerCardChoice))
                         {
-                            Console.WriteLine("__________________________________________________");
-                            Console.WriteLine("__________________________________________________");
-                            Console.WriteLine(MyGame.Players[0].ToString());
-                            Console.WriteLine("__________________________________________________");
-                            Console.WriteLine("__________________________________________________");
-                            Console.Write("Player Card Choice: ");
-                            if (int.TryParse(Console.ReadLine(), out int PlayerCardChoice))
+                            if (PlayerCardChoice == 0 && MyGame.River.NumberOfCards >= 1)
                             {
-                                if (PlayerCardChoice == 0 && MyGame.River.NumberOfCards >= 1)
+                                MyGame.Players[0].Take(MyGame.River.RiverCards);
+                                MyGame.EndTurn();
+                                //MyGame.Players[0].IsThrowing = false;
+                                Console.WriteLine("__________________________________________________");
+                                Console.WriteLine("__________________________________________________");
+                                Console.WriteLine(MyGame.River.ToString());
+                                Console.WriteLine("__________________________________________________");
+                                Console.WriteLine("__________________________________________________");
+                            }
+                            else if (PlayerCardChoice == 100 && MyGame.River.NumberOfCards > 1)
+                            {
+                                if (MyGame.Players[0].Status == GameStatus.Attacking && MyGame.Players[0].IsThrowing == true)
                                 {
-                                    MyGame.Players[0].Take(MyGame.River.RiverCards);
+                                    //MyGame.Players[0].IsThrowing = false;
                                     MyGame.EndTurn();
-                                    MyGame.Players[0].IsThrowing = false;
-                                    Console.WriteLine("__________________________________________________");
-                                    Console.WriteLine("__________________________________________________");
                                     Console.WriteLine(MyGame.River.ToString());
                                     Console.WriteLine("__________________________________________________");
                                     Console.WriteLine("__________________________________________________");
-                                }
-                                else if (PlayerCardChoice == 100 && MyGame.River.NumberOfCards > 1)
-                                {
-                                    if (MyGame.Players[0].Status == GameStatus.Attacking && MyGame.Players[0].IsThrowing == true)
-                                    {
-                                        MyGame.Players[0].IsThrowing = false;
-                                        MyGame.EndTurn();
-                                        Console.WriteLine(MyGame.River.ToString());
-                                        Console.WriteLine("__________________________________________________");
-                                        Console.WriteLine("__________________________________________________");
-                                    }
-                                }
-                                else
-                                {
-                                    Play(MyGame, PlayerCardChoice);
-                                    Console.WriteLine(MyGame.River.ToString());
-                                    Console.WriteLine("__________________________________________________");
-                                    Console.WriteLine("__________________________________________________");
-                                    if (MyGame.River.NumberOfCards > 1)
-                                    {
-                                        if (!MyGame.River.CompareCards())
-                                        {
-                                            MyGame.EndTurn();
-                                            Console.WriteLine("__________________________________________________");
-                                            Console.WriteLine("__________________________________________________");
-                                        }
-                                    }
                                 }
                             }
                             else
                             {
-                                Console.WriteLine("Please type Numerical value and type 0 to take Cards from the river");
+                                Play(MyGame, PlayerCardChoice);
+                                Console.WriteLine(MyGame.River.ToString());
+                                Console.WriteLine("__________________________________________________");
+                                Console.WriteLine("__________________________________________________");
+                                if (MyGame.River.NumberOfCards > 1)
+                                {
+                                    if (!MyGame.River.CompareCards())
+                                    {
+                                        MyGame.EndTurn();
+                                        Console.WriteLine("__________________________________________________");
+                                        Console.WriteLine("__________________________________________________");
+                                    }
+                                }
                             }
+                        }
+                        else
+                        {
+                            Console.WriteLine("Please type Numerical value and type 0 to take Cards from the river");
                         }
                     }
 
@@ -87,7 +85,7 @@ namespace Durak
                             if (MyGame.River.NumberOfCards != 0)
                                 MyGame.Players[0].IsThrowing = true;
                         }
-                        else if (MyGame.Players[1].Status == GameStatus.Attacking )
+                        else if (MyGame.Players[1].Status == GameStatus.Attacking)
                         {
                             if (MyGame.River.NumberOfCards == 0)
                             {
@@ -100,6 +98,9 @@ namespace Durak
                             if (MyGame.River.NumberOfCards != 0)
                                 MyGame.Players[0].IsThrowing = true;
                         }
+                        Console.WriteLine(MyGame.River.ToString());
+                        Console.WriteLine("__________________________________________________");
+                        Console.WriteLine("__________________________________________________");
                         if (MyGame.River.NumberOfCards > 1)
                         {
                             if (!MyGame.River.CompareCards())
@@ -117,7 +118,7 @@ namespace Durak
                     {
                         MyGame.EndTurn();
                     }
-                } while (MyGame.Players[0].Status != GameStatus.Won || MyGame.Players[0].Status != GameStatus.Lost);
+                } while (MyGame.Players[0].Status != GameStatus.Won || MyGame.Players[1].Status != GameStatus.Won);
             }
             catch (Exception ex)
             {
