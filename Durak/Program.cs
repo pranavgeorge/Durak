@@ -33,6 +33,10 @@ namespace Durak
                             {
                                 MyGame.Players[0].Take(MyGame.River.RiverCards);
                                 MyGame.EndTurn();
+                                if (MyGame.Players[1].Status == GameStatus.Won || MyGame.Players[0].Status == GameStatus.Won)
+                                {
+                                    break;
+                                }
                                 //MyGame.Players[0].IsThrowing = false;
                                 Console.WriteLine("__________________________________________________");
                                 Console.WriteLine("__________________________________________________");
@@ -46,6 +50,10 @@ namespace Durak
                                 {
                                     //MyGame.Players[0].IsThrowing = false;
                                     MyGame.EndTurn();
+                                    if (MyGame.Players[1].Status == GameStatus.Won || MyGame.Players[0].Status == GameStatus.Won)
+                                    {
+                                        break;
+                                    }
                                     Console.WriteLine(MyGame.River.ToString());
                                     Console.WriteLine("__________________________________________________");
                                     Console.WriteLine("__________________________________________________");
@@ -62,6 +70,10 @@ namespace Durak
                                     if (!MyGame.River.CompareCards())
                                     {
                                         MyGame.EndTurn();
+                                        if (MyGame.Players[1].Status == GameStatus.Won || MyGame.Players[0].Status == GameStatus.Won)
+                                        {
+                                            break;
+                                        }
                                         Console.WriteLine("__________________________________________________");
                                         Console.WriteLine("__________________________________________________");
                                     }
@@ -71,6 +83,14 @@ namespace Durak
                         else
                         {
                             Console.WriteLine("Please type Numerical value and type 0 to take Cards from the river");
+                        }
+                    }
+                    else
+                    {
+                        MyGame.EndTurn();
+                        if (MyGame.Players[1].Status == GameStatus.Won || MyGame.Players[0].Status == GameStatus.Won)
+                        {
+                            break;
                         }
                     }
 
@@ -106,6 +126,10 @@ namespace Durak
                             if (!MyGame.River.CompareCards())
                             {
                                 MyGame.EndTurn();
+                                if (MyGame.Players[1].Status == GameStatus.Won || MyGame.Players[0].Status == GameStatus.Won)
+                                {
+                                    break;
+                                }
                                 Console.WriteLine("__________________________________________________");
                                 Console.WriteLine("__________________________________________________");
                             }
@@ -117,6 +141,10 @@ namespace Durak
                     else
                     {
                         MyGame.EndTurn();
+                        if (MyGame.Players[1].Status == GameStatus.Won || MyGame.Players[0].Status == GameStatus.Won)
+                        {
+                            break;
+                        }
                     }
                 } while (MyGame.Players[0].Status != GameStatus.Won || MyGame.Players[1].Status != GameStatus.Won);
             }
