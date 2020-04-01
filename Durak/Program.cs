@@ -44,7 +44,7 @@ namespace Durak
                                 Console.WriteLine("__________________________________________________");
                                 Console.WriteLine("__________________________________________________");
                             }
-                            else if (PlayerCardChoice == 100 && MyGame.River.NumberOfCards > 1)
+                            else if (PlayerCardChoice == 100 && MyGame.River.NumberOfCards >= 1)
                             {
                                 if (MyGame.Players[0].Status == GameStatus.Attacking && MyGame.Players[0].IsThrowing == true)
                                 {
