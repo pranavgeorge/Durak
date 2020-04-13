@@ -1,12 +1,12 @@
-﻿<Properties StartupConfiguration="{8F05E7C2-04E3-4C51-90FB-784361EDD8C8}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="DurakSrcLibrary/src/PlayerHand.cs">
+﻿<Properties GitUserInfo="UsingMD" StartupConfiguration="{8F05E7C2-04E3-4C51-90FB-784361EDD8C8}|Default">
+  <MonoDevelop.Ide.Workbench>
     <Files>
       <File FileName="DurakForm/DurakGame.cs" Line="69" Column="34" />
-      <File FileName="DurakSrcLibrary/src/Game.cs" Line="88" Column="22" />
-      <File FileName="DurakSrcLibrary/src/AIPlayer.cs" Line="1" Column="1" />
-      <File FileName="DurakSrcLibrary/src/Card.cs" Line="275" Column="31" />
-      <File FileName="CardBox/ImageCardBox.cs" Line="1" Column="1" />
-      <File FileName="DurakSrcLibrary/src/PlayerHand.cs" Line="1" Column="1" />
+      <File FileName="DurakSrcLibrary/src/Game.cs" />
+      <File FileName="DurakSrcLibrary/src/AIPlayer.cs" />
+      <File FileName="DurakSrcLibrary/src/Card.cs" />
+      <File FileName="CardBox/ImageCardBox.cs" />
+      <File FileName="DurakSrcLibrary/src/PlayerHand.cs" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
