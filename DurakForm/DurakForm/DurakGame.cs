@@ -263,7 +263,7 @@ namespace DurakForm
 
         }
 
-        
+
 
         /// <summary>
         /// Player Ends the Current Attack
@@ -388,70 +388,69 @@ namespace DurakForm
         /// <summary>
         /// AIPlayer Attack or Defends the Card
         /// </summary>
-        private async void AIPlay()
+        private void AIPlay()
         {
-            await Task.Run(() =>
+
+            // if AiPlayer is throwing and has atleast one card
+            if (MyGame.Players[1].IsThrowing == true && MyGame.Players[1].PlayerHand.NumberOfCardsRemaining != 0)
             {
-                // if AiPlayer is throwing and has atleast one card
-                if (MyGame.Players[1].IsThrowing == true && MyGame.Players[1].PlayerHand.NumberOfCardsRemaining != 0)
+                // if Player is defending
+                if (MyGame.Players[1].Status == GameStatus.Defending && MyGame.River.NumberOfCards > 0)
                 {
-                    // if Player is defending
-                    if (MyGame.Players[1].Status == GameStatus.Defending && MyGame.River.NumberOfCards > 0)
+                    // try to defend the last card in the river
+                    MyGame.Players[1].Defend(MyGame);
+                    if (MyGame.River.NumberOfCards != 0)
+                    {
+                        MyGame.Players[0].IsThrowing = true;
+                        MyGame.Players[1].IsThrowing = false;
+                    }
+                    else
+                    {
+                        AIPlay();
+                    }
+
+                }
+                // if Player is attacking
+                else if (MyGame.Players[1].Status == GameStatus.Attacking)
+                {
+                    // Player is starting the new attack
+                    if (MyGame.River.NumberOfCards == 0)
+                    {
+                        MyGame.Players[1].Attack(MyGame);
+                    }
+                    // Player is defending the card when there is atleast one card in river
+                    else
                     {
                         // try to defend the last card in the river
                         MyGame.Players[1].Defend(MyGame);
-                        if (MyGame.River.NumberOfCards != 0)
-                        {
-                            MyGame.Players[0].IsThrowing = true;
-                            MyGame.Players[1].IsThrowing = false;
-                        }
-                        else
-                        {
-                            AIPlay();
-                        }
-
                     }
-                    // if Player is attacking
-                    else if (MyGame.Players[1].Status == GameStatus.Attacking)
+                    if (MyGame.River.NumberOfCards != 0)
                     {
-                        // Player is starting the new attack
-                        if (MyGame.River.NumberOfCards == 0)
-                        {
-                            MyGame.Players[1].Attack(MyGame);
-                        }
-                        // Player is defending the card when there is atleast one card in river
-                        else
-                        {
-                            // try to defend the last card in the river
-                            MyGame.Players[1].Defend(MyGame);
-                        }
-                        if (MyGame.River.NumberOfCards != 0)
-                        {
-                            MyGame.Players[0].IsThrowing = true;
-                            MyGame.Players[1].IsThrowing = false;
-                        }
-                        else
-                        {
-                            AIPlay();
-                        }
+                        MyGame.Players[0].IsThrowing = true;
+                        MyGame.Players[1].IsThrowing = false;
                     }
-                    // until here player must be done by the move
-
-                    // Compare the cards whether the defend is successful or not
-                    CompareRiverCards(MyGame.Players[1]);
-
+                    else
+                    {
+                        AIPlay();
+                    }
                 }
-                // else check if AiPlayer won the game if there is no card left in the deck
-                else
-                {
-                    MyGame.EndTurn();
-                    // Set AIPlayer throwing to false to finish its turn
-                    MyGame.Players[1].IsThrowing = false;
-                    // Set Player throwing to true to start its turn
-                    MyGame.Players[0].IsThrowing = true;
-                    WinningStatus();
-                }
-            });
+                // until here player must be done by the move
+
+                // Compare the cards whether the defend is successful or not
+                CompareRiverCards(MyGame.Players[1]);
+
+            }
+            // else check if AiPlayer won the game if there is no card left in the deck
+            else
+            {
+                MyGame.EndTurn();
+                // Set AIPlayer throwing to false to finish its turn
+                MyGame.Players[1].IsThrowing = false;
+                // Set Player throwing to true to start its turn
+                MyGame.Players[0].IsThrowing = true;
+                WinningStatus();
+            }
+
 
         }
         /// <summary>

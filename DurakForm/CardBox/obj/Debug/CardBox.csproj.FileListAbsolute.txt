@@ -51,3 +51,14 @@ D:/dc data/sem4/oops3/OOPSpROJECT/Durak/DurakForm/CardBox/obj/Debug/CardBox.pdb
 /Users/pranavgupta/Documents/Durak-master/DurakForm/CardBox/obj/Debug/CardBox.csproj.CopyComplete
 /Users/pranavgupta/Documents/Durak-master/DurakForm/CardBox/obj/Debug/CardBox.dll
 /Users/pranavgupta/Documents/Durak-master/DurakForm/CardBox/obj/Debug/CardBox.pdb
+/Users/pranavgupta/Documents/Repo/Durak/DurakForm/CardBox/bin/Debug/CardBox.dll
+/Users/pranavgupta/Documents/Repo/Durak/DurakForm/CardBox/bin/Debug/CardBox.pdb
+/Users/pranavgupta/Documents/Repo/Durak/DurakForm/CardBox/bin/Debug/DurakSrcLibrary.dll
+/Users/pranavgupta/Documents/Repo/Durak/DurakForm/CardBox/bin/Debug/DurakSrcLibrary.pdb
+/Users/pranavgupta/Documents/Repo/Durak/DurakForm/CardBox/obj/Debug/CardBox.csprojAssemblyReference.cache
+/Users/pranavgupta/Documents/Repo/Durak/DurakForm/CardBox/obj/Debug/CardBox.ImageCardBox.resources
+/Users/pranavgupta/Documents/Repo/Durak/DurakForm/CardBox/obj/Debug/CardBox.csproj.GenerateResource.cache
+/Users/pranavgupta/Documents/Repo/Durak/DurakForm/CardBox/obj/Debug/CardBox.csproj.CoreCompileInputs.cache
+/Users/pranavgupta/Documents/Repo/Durak/DurakForm/CardBox/obj/Debug/CardBox.csproj.CopyComplete
+/Users/pranavgupta/Documents/Repo/Durak/DurakForm/CardBox/obj/Debug/CardBox.dll
+/Users/pranavgupta/Documents/Repo/Durak/DurakForm/CardBox/obj/Debug/CardBox.pdb

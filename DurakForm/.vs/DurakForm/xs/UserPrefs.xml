@@ -1,7 +1,7 @@
 ﻿<Properties GitUserInfo="UsingMD" StartupConfiguration="{8F05E7C2-04E3-4C51-90FB-784361EDD8C8}|Default">
   <MonoDevelop.Ide.Workbench>
     <Files>
-      <File FileName="DurakForm/DurakGame.cs" Line="69" Column="34" />
+      <File FileName="DurakForm/DurakGame.cs" Line="391" Column="16" />
       <File FileName="DurakSrcLibrary/src/Game.cs" />
       <File FileName="DurakSrcLibrary/src/AIPlayer.cs" />
       <File FileName="DurakSrcLibrary/src/Card.cs" />
@@ -13,11 +13,11 @@
         <State name="__root__">
           <Node name="DurakForm" expanded="True">
             <Node name="CardBox" expanded="True" />
-            <Node name="DurakForm" expanded="True" />
+            <Node name="DurakForm" expanded="True">
+              <Node name="DurakGame.cs" selected="True" />
+            </Node>
             <Node name="DurakSrcLibrary" expanded="True">
-              <Node name="src" expanded="True">
-                <Node name="PlayerHand.cs" selected="True" />
-              </Node>
+              <Node name="src" expanded="True" />
             </Node>
           </Node>
         </State>

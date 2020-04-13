@@ -25,3 +25,9 @@ D:/dc data/sem4/oops3/OOPSpROJECT/Durak/DurakForm/DurakSrcLibrary/obj/Debug/Dura
 /Users/pranavgupta/Documents/Durak-master/DurakForm/DurakSrcLibrary/obj/Debug/DurakSrcLibrary.pdb
 /Users/pranavgupta/Documents/Durak-master/DurakForm/DurakSrcLibrary/bin/Debug/DurakSrcLibrary.dll
 /Users/pranavgupta/Documents/Durak-master/DurakForm/DurakSrcLibrary/bin/Debug/DurakSrcLibrary.pdb
+/Users/pranavgupta/Documents/Repo/Durak/DurakForm/DurakSrcLibrary/bin/Debug/DurakSrcLibrary.dll
+/Users/pranavgupta/Documents/Repo/Durak/DurakForm/DurakSrcLibrary/bin/Debug/DurakSrcLibrary.pdb
+/Users/pranavgupta/Documents/Repo/Durak/DurakForm/DurakSrcLibrary/obj/Debug/DurakSrcLibrary.csprojAssemblyReference.cache
+/Users/pranavgupta/Documents/Repo/Durak/DurakForm/DurakSrcLibrary/obj/Debug/DurakSrcLibrary.csproj.CoreCompileInputs.cache
+/Users/pranavgupta/Documents/Repo/Durak/DurakForm/DurakSrcLibrary/obj/Debug/DurakSrcLibrary.dll
+/Users/pranavgupta/Documents/Repo/Durak/DurakForm/DurakSrcLibrary/obj/Debug/DurakSrcLibrary.pdb
