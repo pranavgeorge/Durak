@@ -6,7 +6,7 @@ namespace DurakSrcLibrary
 {
     public class Player
     {
-        private static readonly string DEFALUT_NAME = "Mayank"; // Default Name in the Game
+        private static readonly string DEFALUT_NAME = "Pranav"; // Default Name in the Game
         private static readonly int MINIMUM_HAND_SIZE = 6;
         private const GameStatus DEFAULT_GAME_STATUS = GameStatus.None;
 
