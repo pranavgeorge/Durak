@@ -1,6 +1,0 @@
-/Users/pranavgupta/Documents/Repository/Durak/bin/Debug/Durak.exe
-/Users/pranavgupta/Documents/Repository/Durak/bin/Debug/Durak.pdb
-/Users/pranavgupta/Documents/Repository/Durak/obj/Debug/Durak.csprojAssemblyReference.cache
-/Users/pranavgupta/Documents/Repository/Durak/obj/Debug/Durak.exe
-/Users/pranavgupta/Documents/Repository/Durak/obj/Debug/Durak.pdb
-/Users/pranavgupta/Documents/Repository/Durak/obj/Debug/Durak.csproj.CoreCompileInputs.cache
