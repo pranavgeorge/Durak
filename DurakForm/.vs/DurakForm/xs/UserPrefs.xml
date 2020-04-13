@@ -1,0 +1,34 @@
+﻿<Properties StartupConfiguration="{8F05E7C2-04E3-4C51-90FB-784361EDD8C8}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="DurakSrcLibrary/src/PlayerHand.cs">
+    <Files>
+      <File FileName="DurakForm/DurakGame.cs" Line="69" Column="34" />
+      <File FileName="DurakSrcLibrary/src/Game.cs" Line="88" Column="22" />
+      <File FileName="DurakSrcLibrary/src/AIPlayer.cs" Line="1" Column="1" />
+      <File FileName="DurakSrcLibrary/src/Card.cs" Line="275" Column="31" />
+      <File FileName="CardBox/ImageCardBox.cs" Line="1" Column="1" />
+      <File FileName="DurakSrcLibrary/src/PlayerHand.cs" Line="1" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="DurakForm" expanded="True">
+            <Node name="CardBox" expanded="True" />
+            <Node name="DurakForm" expanded="True" />
+            <Node name="DurakSrcLibrary" expanded="True">
+              <Node name="src" expanded="True">
+                <Node name="PlayerHand.cs" selected="True" />
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.ItemProperties.DurakForm PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>

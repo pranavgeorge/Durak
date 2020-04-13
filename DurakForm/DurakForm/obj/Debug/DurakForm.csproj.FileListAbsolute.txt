@@ -1,0 +1,100 @@
+D:/Durak/DurakForm/DurakForm/obj/Debug/DurakForm.csprojAssemblyReference.cache
+D:/Durak/DurakForm/DurakForm/obj/Debug/DurakForm.Properties.Resources.resources
+D:/Durak/DurakForm/DurakForm/obj/Debug/DurakForm.csproj.GenerateResource.cache
+D:/Durak/DurakForm/DurakForm/obj/Debug/DurakForm.csproj.CoreCompileInputs.cache
+D:/Durak/DurakForm/DurakForm/bin/Debug/DurakForm.exe.config
+D:/Durak/DurakForm/DurakForm/bin/Debug/DurakForm.exe
+D:/Durak/DurakForm/DurakForm/bin/Debug/DurakForm.pdb
+D:/Durak/DurakForm/DurakForm/obj/Debug/DurakForm.exe
+D:/Durak/DurakForm/DurakForm/obj/Debug/DurakForm.pdb
+D:/Durak/DurakForm/DurakForm/obj/Debug/DurakForm.DurakGame.resources
+D:/Durak/DurakForm/DurakForm/obj/Debug/DurakForm.MainMenuForm.resources
+D:/New folder/Durak/DurakForm/DurakForm/bin/Debug/DurakForm.exe.config
+D:/New folder/Durak/DurakForm/DurakForm/bin/Debug/DurakForm.exe
+D:/New folder/Durak/DurakForm/DurakForm/bin/Debug/DurakForm.pdb
+D:/New folder/Durak/DurakForm/DurakForm/obj/Debug/DurakForm.csprojAssemblyReference.cache
+D:/New folder/Durak/DurakForm/DurakForm/obj/Debug/DurakForm.DurakGame.resources
+D:/New folder/Durak/DurakForm/DurakForm/obj/Debug/DurakForm.MainMenuForm.resources
+D:/New folder/Durak/DurakForm/DurakForm/obj/Debug/DurakForm.Properties.Resources.resources
+D:/New folder/Durak/DurakForm/DurakForm/obj/Debug/DurakForm.csproj.GenerateResource.cache
+D:/New folder/Durak/DurakForm/DurakForm/obj/Debug/DurakForm.csproj.CoreCompileInputs.cache
+D:/New folder/Durak/DurakForm/DurakForm/obj/Debug/DurakForm.exe
+D:/New folder/Durak/DurakForm/DurakForm/obj/Debug/DurakForm.pdb
+C:/Users/KumarG/Downloads/Durak/Durak/DurakForm/DurakForm/obj/Debug/DurakForm.csprojAssemblyReference.cache
+C:/Users/KumarG/Downloads/Durak/Durak/DurakForm/DurakForm/obj/Debug/DurakForm.DurakGame.resources
+C:/Users/KumarG/Downloads/Durak/Durak/DurakForm/DurakForm/obj/Debug/DurakForm.MainMenuForm.resources
+C:/Users/KumarG/Downloads/Durak/Durak/DurakForm/DurakForm/obj/Debug/DurakForm.Properties.Resources.resources
+C:/Users/KumarG/Downloads/Durak/Durak/DurakForm/DurakForm/obj/Debug/DurakForm.csproj.GenerateResource.cache
+C:/Users/KumarG/Downloads/Durak/Durak/DurakForm/DurakForm/obj/Debug/DurakForm.csproj.CoreCompileInputs.cache
+C:/Users/KumarG/Downloads/Durak/Durak/DurakForm/DurakForm/bin/Debug/DurakForm.exe.config
+C:/Users/KumarG/Downloads/Durak/Durak/DurakForm/DurakForm/bin/Debug/DurakForm.exe
+C:/Users/KumarG/Downloads/Durak/Durak/DurakForm/DurakForm/bin/Debug/DurakForm.pdb
+C:/Users/KumarG/Downloads/Durak/Durak/DurakForm/DurakForm/bin/Debug/CardBox.dll
+C:/Users/KumarG/Downloads/Durak/Durak/DurakForm/DurakForm/bin/Debug/DurakSrcLibrary.dll
+C:/Users/KumarG/Downloads/Durak/Durak/DurakForm/DurakForm/bin/Debug/CardBox.pdb
+C:/Users/KumarG/Downloads/Durak/Durak/DurakForm/DurakForm/bin/Debug/DurakSrcLibrary.pdb
+C:/Users/KumarG/Downloads/Durak/Durak/DurakForm/DurakForm/obj/Debug/DurakForm.csproj.CopyComplete
+C:/Users/KumarG/Downloads/Durak/Durak/DurakForm/DurakForm/obj/Debug/DurakForm.exe
+C:/Users/KumarG/Downloads/Durak/Durak/DurakForm/DurakForm/obj/Debug/DurakForm.pdb
+/Users/pranavgupta/Desktop/Durak/Durak/DurakForm/DurakForm/bin/Debug/DurakForm.exe.config
+/Users/pranavgupta/Desktop/Durak/Durak/DurakForm/DurakForm/bin/Debug/DurakForm.exe
+/Users/pranavgupta/Desktop/Durak/Durak/DurakForm/DurakForm/bin/Debug/DurakForm.pdb
+/Users/pranavgupta/Desktop/Durak/Durak/DurakForm/DurakForm/bin/Debug/CardBox.dll
+/Users/pranavgupta/Desktop/Durak/Durak/DurakForm/DurakForm/bin/Debug/DurakSrcLibrary.dll
+/Users/pranavgupta/Desktop/Durak/Durak/DurakForm/DurakForm/bin/Debug/CardBox.pdb
+/Users/pranavgupta/Desktop/Durak/Durak/DurakForm/DurakForm/bin/Debug/DurakSrcLibrary.pdb
+/Users/pranavgupta/Desktop/Durak/Durak/DurakForm/DurakForm/obj/Debug/DurakForm.csprojAssemblyReference.cache
+/Users/pranavgupta/Desktop/Durak/Durak/DurakForm/DurakForm/obj/Debug/DurakForm.DurakGame.resources
+/Users/pranavgupta/Desktop/Durak/Durak/DurakForm/DurakForm/obj/Debug/DurakForm.MainMenuForm.resources
+/Users/pranavgupta/Desktop/Durak/Durak/DurakForm/DurakForm/obj/Debug/DurakForm.Properties.Resources.resources
+/Users/pranavgupta/Desktop/Durak/Durak/DurakForm/DurakForm/obj/Debug/DurakForm.csproj.GenerateResource.cache
+/Users/pranavgupta/Desktop/Durak/Durak/DurakForm/DurakForm/obj/Debug/DurakForm.csproj.CoreCompileInputs.cache
+/Users/pranavgupta/Desktop/Durak/Durak/DurakForm/DurakForm/obj/Debug/DurakForm.csproj.CopyComplete
+/Users/pranavgupta/Desktop/Durak/Durak/DurakForm/DurakForm/obj/Debug/DurakForm.exe
+/Users/pranavgupta/Desktop/Durak/Durak/DurakForm/DurakForm/obj/Debug/DurakForm.pdb
+D:/dc data/sem4/oops3/new/Durak (2)/Durak/DurakForm/DurakForm/bin/Debug/DurakForm.exe.config
+D:/dc data/sem4/oops3/new/Durak (2)/Durak/DurakForm/DurakForm/bin/Debug/DurakForm.exe
+D:/dc data/sem4/oops3/new/Durak (2)/Durak/DurakForm/DurakForm/bin/Debug/DurakForm.pdb
+D:/dc data/sem4/oops3/new/Durak (2)/Durak/DurakForm/DurakForm/bin/Debug/CardBox.dll
+D:/dc data/sem4/oops3/new/Durak (2)/Durak/DurakForm/DurakForm/bin/Debug/DurakSrcLibrary.dll
+D:/dc data/sem4/oops3/new/Durak (2)/Durak/DurakForm/DurakForm/bin/Debug/CardBox.pdb
+D:/dc data/sem4/oops3/new/Durak (2)/Durak/DurakForm/DurakForm/bin/Debug/DurakSrcLibrary.pdb
+D:/dc data/sem4/oops3/new/Durak (2)/Durak/DurakForm/DurakForm/obj/Debug/DurakForm.csprojAssemblyReference.cache
+D:/dc data/sem4/oops3/new/Durak (2)/Durak/DurakForm/DurakForm/obj/Debug/DurakForm.DurakGame.resources
+D:/dc data/sem4/oops3/new/Durak (2)/Durak/DurakForm/DurakForm/obj/Debug/DurakForm.MainMenuForm.resources
+D:/dc data/sem4/oops3/new/Durak (2)/Durak/DurakForm/DurakForm/obj/Debug/DurakForm.Properties.Resources.resources
+D:/dc data/sem4/oops3/new/Durak (2)/Durak/DurakForm/DurakForm/obj/Debug/DurakForm.csproj.GenerateResource.cache
+D:/dc data/sem4/oops3/new/Durak (2)/Durak/DurakForm/DurakForm/obj/Debug/DurakForm.csproj.CopyComplete
+D:/dc data/sem4/oops3/new/Durak (2)/Durak/DurakForm/DurakForm/obj/Debug/DurakForm.exe
+D:/dc data/sem4/oops3/new/Durak (2)/Durak/DurakForm/DurakForm/obj/Debug/DurakForm.pdb
+D:/dc data/sem4/oops3/OOPSpROJECT/Durak/DurakForm/DurakForm/obj/Debug/DurakForm.csprojAssemblyReference.cache
+D:/dc data/sem4/oops3/OOPSpROJECT/Durak/DurakForm/DurakForm/obj/Debug/DurakForm.DurakGame.resources
+D:/dc data/sem4/oops3/OOPSpROJECT/Durak/DurakForm/DurakForm/obj/Debug/DurakForm.MainMenuForm.resources
+D:/dc data/sem4/oops3/OOPSpROJECT/Durak/DurakForm/DurakForm/obj/Debug/DurakForm.csproj.GenerateResource.cache
+D:/dc data/sem4/oops3/OOPSpROJECT/Durak/DurakForm/DurakForm/obj/Debug/DurakForm.exe
+D:/dc data/sem4/oops3/OOPSpROJECT/Durak/DurakForm/DurakForm/obj/Debug/DurakForm.pdb
+D:/dc data/sem4/oops3/OOPSpROJECT/Durak/DurakForm/DurakForm/bin/Debug/DurakForm.exe.config
+D:/dc data/sem4/oops3/OOPSpROJECT/Durak/DurakForm/DurakForm/bin/Debug/DurakForm.exe
+D:/dc data/sem4/oops3/OOPSpROJECT/Durak/DurakForm/DurakForm/bin/Debug/DurakForm.pdb
+D:/dc data/sem4/oops3/OOPSpROJECT/Durak/DurakForm/DurakForm/bin/Debug/CardBox.dll
+D:/dc data/sem4/oops3/OOPSpROJECT/Durak/DurakForm/DurakForm/bin/Debug/DurakSrcLibrary.dll
+D:/dc data/sem4/oops3/OOPSpROJECT/Durak/DurakForm/DurakForm/bin/Debug/CardBox.pdb
+D:/dc data/sem4/oops3/OOPSpROJECT/Durak/DurakForm/DurakForm/bin/Debug/DurakSrcLibrary.pdb
+D:/dc data/sem4/oops3/OOPSpROJECT/Durak/DurakForm/DurakForm/obj/Debug/DurakForm.Properties.Resources.resources
+D:/dc data/sem4/oops3/OOPSpROJECT/Durak/DurakForm/DurakForm/obj/Debug/DurakForm.csproj.CopyComplete
+/Users/pranavgupta/Documents/Durak-master/DurakForm/DurakForm/bin/Debug/DurakForm.exe.config
+/Users/pranavgupta/Documents/Durak-master/DurakForm/DurakForm/bin/Debug/DurakForm.exe
+/Users/pranavgupta/Documents/Durak-master/DurakForm/DurakForm/bin/Debug/DurakForm.pdb
+/Users/pranavgupta/Documents/Durak-master/DurakForm/DurakForm/bin/Debug/CardBox.dll
+/Users/pranavgupta/Documents/Durak-master/DurakForm/DurakForm/bin/Debug/DurakSrcLibrary.dll
+/Users/pranavgupta/Documents/Durak-master/DurakForm/DurakForm/bin/Debug/CardBox.pdb
+/Users/pranavgupta/Documents/Durak-master/DurakForm/DurakForm/bin/Debug/DurakSrcLibrary.pdb
+/Users/pranavgupta/Documents/Durak-master/DurakForm/DurakForm/obj/Debug/DurakForm.csprojAssemblyReference.cache
+/Users/pranavgupta/Documents/Durak-master/DurakForm/DurakForm/obj/Debug/DurakForm.DurakGame.resources
+/Users/pranavgupta/Documents/Durak-master/DurakForm/DurakForm/obj/Debug/DurakForm.MainMenuForm.resources
+/Users/pranavgupta/Documents/Durak-master/DurakForm/DurakForm/obj/Debug/DurakForm.Properties.Resources.resources
+/Users/pranavgupta/Documents/Durak-master/DurakForm/DurakForm/obj/Debug/DurakForm.csproj.GenerateResource.cache
+/Users/pranavgupta/Documents/Durak-master/DurakForm/DurakForm/obj/Debug/DurakForm.csproj.CoreCompileInputs.cache
+/Users/pranavgupta/Documents/Durak-master/DurakForm/DurakForm/obj/Debug/DurakForm.csproj.CopyComplete
+/Users/pranavgupta/Documents/Durak-master/DurakForm/DurakForm/obj/Debug/DurakForm.exe
+/Users/pranavgupta/Documents/Durak-master/DurakForm/DurakForm/obj/Debug/DurakForm.pdb

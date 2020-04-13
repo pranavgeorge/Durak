@@ -1,0 +1,158 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{8F05E7C2-04E3-4C51-90FB-784361EDD8C8}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>DurakForm</RootNamespace>
+    <AssemblyName>DurakForm</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="MainMenuForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainMenuForm.Designer.cs">
+      <DependentUpon>MainMenuForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DurakGame.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DurakGame.Designer.cs">
+      <DependentUpon>DurakGame.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="DurakGame.resx">
+      <DependentUpon>DurakGame.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainMenuForm.resx">
+      <DependentUpon>MainMenuForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\10C.png" />
+    <Content Include="Resources\10D.png" />
+    <Content Include="Resources\10H.png" />
+    <Content Include="Resources\10S.png" />
+    <Content Include="Resources\2C.png" />
+    <Content Include="Resources\2D.png" />
+    <Content Include="Resources\2H.png" />
+    <Content Include="Resources\2S.png" />
+    <Content Include="Resources\3C.png" />
+    <Content Include="Resources\3D.png" />
+    <Content Include="Resources\3H.png" />
+    <Content Include="Resources\3S.png" />
+    <Content Include="Resources\4C.png" />
+    <Content Include="Resources\4D.png" />
+    <Content Include="Resources\4H.png" />
+    <Content Include="Resources\4S.png" />
+    <Content Include="Resources\5C.png" />
+    <Content Include="Resources\5D.png" />
+    <Content Include="Resources\5H.png" />
+    <Content Include="Resources\5S.png" />
+    <Content Include="Resources\6C.png" />
+    <Content Include="Resources\6D.png" />
+    <Content Include="Resources\6H.png" />
+    <Content Include="Resources\6S.png" />
+    <Content Include="Resources\7C.png" />
+    <Content Include="Resources\7D.png" />
+    <Content Include="Resources\7H.png" />
+    <Content Include="Resources\7S.png" />
+    <Content Include="Resources\8C.png" />
+    <Content Include="Resources\8D.png" />
+    <Content Include="Resources\8H.png" />
+    <Content Include="Resources\8S.png" />
+    <Content Include="Resources\9C.png" />
+    <Content Include="Resources\9D.png" />
+    <Content Include="Resources\9H.png" />
+    <Content Include="Resources\9S.png" />
+    <Content Include="Resources\AC.png" />
+    <Content Include="Resources\AD.png" />
+    <Content Include="Resources\AH.png" />
+    <Content Include="Resources\AS.png" />
+    <Content Include="Resources\back.png" />
+    <Content Include="Resources\JC.png" />
+    <Content Include="Resources\JD.png" />
+    <Content Include="Resources\JH.png" />
+    <Content Include="Resources\JS.png" />
+    <Content Include="Resources\KC.png" />
+    <Content Include="Resources\KD.png" />
+    <Content Include="Resources\KH.png" />
+    <Content Include="Resources\KS.png" />
+    <Content Include="Resources\QC.png" />
+    <Content Include="Resources\QD.png" />
+    <Content Include="Resources\QH.png" />
+    <Content Include="Resources\QS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CardBox\CardBox.csproj">
+      <Project>{17fef11e-8c63-4c6a-9b38-a976190c44f7}</Project>
+      <Name>CardBox</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DurakSrcLibrary\DurakSrcLibrary.csproj">
+      <Project>{eee240f9-3a9b-4021-bfd2-cbac30059452}</Project>
+      <Name>DurakSrcLibrary</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
