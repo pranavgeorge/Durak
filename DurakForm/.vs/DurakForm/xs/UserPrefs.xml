@@ -4,20 +4,22 @@
       <File FileName="DurakForm/DurakGame.cs" Line="391" Column="16" />
       <File FileName="DurakSrcLibrary/src/Game.cs" />
       <File FileName="DurakSrcLibrary/src/AIPlayer.cs" />
-      <File FileName="DurakSrcLibrary/src/Card.cs" />
+      <File FileName="DurakSrcLibrary/src/Card.cs" Line="227" Column="33" />
       <File FileName="CardBox/ImageCardBox.cs" />
       <File FileName="DurakSrcLibrary/src/PlayerHand.cs" />
+      <File FileName="DurakSrcLibrary/src/Player.cs" />
+      <File FileName="CardBox/CardBox.csproj" Line="69" Column="11" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="DurakForm" expanded="True">
             <Node name="CardBox" expanded="True" />
-            <Node name="DurakForm" expanded="True">
-              <Node name="DurakGame.cs" selected="True" />
-            </Node>
+            <Node name="DurakForm" expanded="True" />
             <Node name="DurakSrcLibrary" expanded="True">
-              <Node name="src" expanded="True" />
+              <Node name="src" expanded="True">
+                <Node name="Card.cs" selected="True" />
+              </Node>
             </Node>
           </Node>
         </State>

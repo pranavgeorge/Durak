@@ -224,44 +224,22 @@ namespace DurakSrcLibrary
         private string GetImageName()
         {
             int lCardValue = (int)fCardRank;
-            string lImageName;
-            switch (fCardRank)
+            string lImageName = fCardRank switch
             {
-                case CardRank.Ace:
-                    lImageName = "A";
-                    break;
-                case CardRank.King:
-                    lImageName = "K";
-                    break;
-                case CardRank.Queen:
-                    lImageName = "Q";
-                    break;
-                case CardRank.Jack:
-                    lImageName = "J";
-                    break;
-                default:
-                    lImageName = "_" + lCardValue.ToString();
-                    break;
-            }
-            switch (fCardSuit)
+                CardRank.Ace => "A",
+                CardRank.King => "K",
+                CardRank.Queen => "Q",
+                CardRank.Jack => "J",
+                _ => "_" + lCardValue.ToString(),
+            };
+            lImageName += fCardSuit switch
             {
-                case CardSuit.Club:
-                    lImageName += "C";
-                    break;
-                case CardSuit.Diamond:
-                    lImageName += "D";
-                    break;
-                case CardSuit.Heart:
-                    lImageName += "H";
-                    break;
-                case CardSuit.Spade:
-                    lImageName += "S";
-                    break;
-                default:
-                    lImageName += "?";
-                    break;
-            }
-
+                CardSuit.Club => "C",
+                CardSuit.Diamond => "D",
+                CardSuit.Heart => "H",
+                CardSuit.Spade => "S",
+                _ => "?",
+            };
             return lImageName;
         }
         public void TurnOver()
